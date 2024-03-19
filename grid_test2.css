@@ -1,0 +1,68 @@
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* 
+  ★★★★★
+  개수를 자동으로 채우고 몇 개가 됐건 간에 최소 100px을 유지하되 클 떄는 1:1:1을 유지하라 
+  */
+  grid-auto-rows: minmax(100px, 1fr);
+  /* 
+  - 암시적 영역을 작성한다. 
+  - grid-template-columns와 함께 동일한 값으로 작성하면 1:1:1 비율을 유지한다.
+  - 1fr은 생략 가능하다. 
+  */
+  grid-auto-flow: row dense;
+
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #f1f5f6;
+}
+.wrap > div {
+  border: 1px solid #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap > div:nth-of-type(2n) {
+  background-color: lavenderblush;
+}
+.wrap > div:nth-of-type(2n + 1) {
+  background-color: lavender;
+}
+.wrap > div:nth-of-type(3n) {
+  background-color: lemonchiffon;
+}
+.wrap > div:nth-of-type(4n) {
+  background-color: lightcyan;
+}
+/* 
+.c1 {
+  background-color: lavenderblush;
+}
+.c2 {
+  background-color: lavender;
+}
+.c3 {
+  background-color: lemonchiffon;
+}
+.c4 {
+  background-color: lightcyan;
+}
+*/
+.wrap div.c5 {
+  background-color: lightpink;
+  color: #fff;
+}
+.span2 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.span3 {
+  grid-row: span 3;
+  grid-column: span 3;
+}
+.span4 {
+  grid-row: span 4;
+  grid-column: span 3;
+}
