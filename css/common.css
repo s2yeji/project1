@@ -149,6 +149,8 @@ html {
   position: relative;
   overflow: hidden;
   font-family: 'pretendard';
+  border: 1px solid var(--color-bk);
+  border-bottom: 0;
 }
 
 .wrap .btnScroll::before,
@@ -230,9 +232,6 @@ html {
   margin: auto;
 }
 
-.wrap {
-  border: 1px solid var(--color-bk);
-}
 .wrap > *::before,
 .wrap > *::after {
   content: '';
@@ -240,6 +239,7 @@ html {
 }
 .wrap > *:last-child {
   border: none;
+  padding-bottom: 50px;
 }
 
 /* header */
@@ -478,6 +478,10 @@ main h2 .blink {
     top: 123px;
   }
 
+  main #expertise .mw h4::before {
+    left: -20px;
+    font-size: 15px;
+  }
   main #expertise .mw h4 {
     font-size: 1.5rem;
   }
@@ -558,13 +562,16 @@ main h2 .blink {
     grid-auto-rows: minmax(250px, 1fr);
     gap: 2rem;
   }
+
   main #expertise .mw ul {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: minmax(200px, 1fr);
-    gap: 1rem;
   }
 }
 @media (max-width: 810px) {
+  .mw {
+    width: calc(100% - 48px);
+  }
   main h2,
   main h2 .blink {
     font-size: 3rem;
@@ -603,10 +610,9 @@ main h2 .blink {
     font-size: 1.125rem;
   }
 }
-
 @media (max-width: 725px) {
-  header nav a {
-    /* font-size: 0.875rem; */
+  header nav ul {
+    width: 80%;
   }
 
   main h2 {
@@ -628,14 +634,11 @@ main h2 .blink {
     width: 140px;
     height: 50px;
     line-height: 50px;
-    top: 30%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  main section:first-child .mw .left,
-  main section:first-child .mw .right {
-    width: 50%;
-  }
+
   main section:first-child .mw .left a,
   main section:first-child .mw .right {
     font-size: 1rem;
@@ -655,6 +658,7 @@ main h2 .blink {
 
   main #expertise .mw h4 {
     font-size: 1.25rem;
+    margin-bottom: 20px;
   }
 
   main #display {
@@ -664,6 +668,10 @@ main h2 .blink {
   }
 }
 @media (max-width: 680px) {
+  .mw {
+    width: 100%;
+  }
+
   main section:last-child > div.mw {
     display: block;
   }
@@ -675,8 +683,139 @@ main h2 .blink {
     width: 100%;
   }
 
+  .wrap > *:last-child {
+    padding-top: 60px;
+  }
+  footer#ft .top {
+    padding-bottom: 50px;
+  }
   footer#ft .top p {
     font-size: 2.6875rem;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 630px) {
+  main #projects > div.mw > div {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(200px, 1fr);
+  }
+
+  main #expertise .mw ul {
+    grid: none;
+    gap: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  main section:first-child > div.mw > div {
+    display: block;
+  }
+  main section:first-child .mw .left {
+    margin-bottom: 2rem;
+  }
+  main section:first-child .mw .left,
+  main section:first-child .mw .right {
+    width: 100%;
+  }
+  .wrap .btnScroll {
+    top: 35%;
+  }
+
+  footer .btm > p {
+    font-size: 0.875rem;
+  }
+  footer#ft .fa-github {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 525px) {
+  header nav ul {
+    width: 90%;
+  }
+
+  main h2 {
+    margin-bottom: 100px;
+  }
+  main h2,
+  main h2 .blink {
+    font-size: 2rem;
+  }
+
+  .wrap .btnScroll {
+    top: 30%;
+  }
+
+  main #projects .mw .more {
+    top: 7px;
+  }
+}
+@media (max-width: 435px) {
+  header nav a {
+    font-size: 0.875rem;
+  }
+
+  main > * {
+    padding: 50px 2rem;
+  }
+
+  main h2,
+  main h2 .blink {
+    font-size: 1.5rem;
+  }
+
+  main section:first-child {
+    padding: 50px 2rem;
+  }
+  main section:first-child .mw .left p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  main section:first-child .mw .left a,
+  main section:first-child .mw .right {
+    font-size: 0.875rem;
+  }
+
+  .wrap .btnScroll {
+    /* top: 25%; */
+  }
+
+  main #projects > div.mw > p,
+  main #projects .mw .more,
+  main #expertise .mw p {
+    font-size: 0.875rem;
+  }
+  main .mw h3 {
+    font-size: 1.125rem;
+    margin-bottom: 16px;
+  }
+
+  main #expertise .mw h4 {
+    font-size: 1rem;
+  }
+
+  main #display {
+    font-size: 90px;
+  }
+
+  main section:last-child .mw .left {
+    margin-bottom: 2rem;
+  }
+  main section:last-child .mw .left p:first-child {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  }
+  main section:last-child .mw .left p:last-child {
+    font-size: 1rem;
+  }
+  main section:last-child .right p:first-child,
+  main section:last-child .right p:last-child {
+    font-size: 0.875rem;
+  }
+
+  footer#ft .top a {
+    font-size: 0.875rem;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 1.8rem;
   }
 }
 
