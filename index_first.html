@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/common_first.css" />
     <script src="./js/common.js" defer></script>
   </head>
   <body>
@@ -24,21 +24,19 @@
             <a href="/">yeji<i class="fa-regular fa-copyright"></i></a>
           </h1>
           <nav>
-            <span class="bg"></span>
-            <a href="#hd" class="active">home</a>
-            <a href="#projects"><span>99</span>projects</a>
-            <a href="#expertises">about</a>
-            <a href="#contact">contact</a>
+            <ul>
+              <li class="active"><a href="#hd">home</a></li>
+              <li>
+                <a href="#projects"><span>99</span>projects</a>
+              </li>
+              <li><a href="#expertises">about</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
           </nav>
-          <button class="ham">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
         </div>
       </header>
       <main>
-        <section id="main">
+        <section>
           <div class="mw">
             <h2 id="mainText">
               <!-- front-end.<br />web (developer)_ -->
@@ -77,39 +75,46 @@
               solutions, I aim to assist you in construction<br />
               the brand of your fantasies.
             </p>
-            <ul class="myProject">
-              <!-- 추후 데이터베이스로 5, 6, 7, ... 이렇게 늘어나게 처리한다면 부모에 class를 넣어주는 게 좋다. -->
-              <li>
-                <div class="img"><img src="./img/Card1.jpg" alt="" /></div>
-                <h4>제목</h4>
-                <p>설명</p>
-                <a href="#">자세히 보기</a>
-              </li>
-              <li>
-                <div class="img"><img src="./img/Card2.jpg" alt="" /></div>
-                <h4>제목</h4>
-                <p>설명</p>
-                <a href="#">자세히 보기</a>
-              </li>
-              <li>
-                <div class="img"><img src="./img/Card3.jpg" alt="" /></div>
-                <h4>제목</h4>
-                <p>설명</p>
-                <a href="#">자세히 보기</a>
-              </li>
-              <li>
-                <div class="img"><img src="./img/Card4.jpg" alt="" /></div>
-                <h4>제목</h4>
-                <p>설명</p>
-                <a href="#">자세히 보기</a>
-              </li>
-            </ul>
+            <div>
+              <figure>
+                <figcaption>
+                  <div class="img"><img src="./img/Card1.jpg" alt="" /></div>
+                  <h4>제목</h4>
+                  <p>설명</p>
+                  <a href="#">자세히 보기</a>
+                </figcaption>
+              </figure>
+              <figure>
+                <figcaption>
+                  <div class="img"><img src="./img/Card2.jpg" alt="" /></div>
+                  <h4>제목</h4>
+                  <p>설명</p>
+                  <a href="#">자세히 보기</a>
+                </figcaption>
+              </figure>
+              <figure>
+                <figcaption>
+                  <div class="img"><img src="./img/Card3.jpg" alt="" /></div>
+                  <h4>제목</h4>
+                  <p>설명</p>
+                  <a href="#">자세히 보기</a>
+                </figcaption>
+              </figure>
+              <figure>
+                <figcaption>
+                  <div class="img"><img src="./img/Card4.jpg" alt="" /></div>
+                  <h4>제목</h4>
+                  <p>설명</p>
+                  <a href="#">자세히 보기</a>
+                </figcaption>
+              </figure>
+            </div>
             <a href="#" class="more"
               >more<i class="fa-solid fa-caret-right"></i
             ></a>
           </div>
         </section>
-        <section id="expertises">
+        <section id="expertise">
           <div class="mw">
             <h3>Expertise</h3>
             <ul>
@@ -154,13 +159,12 @@
           </div>
         </section>
         <section id="display">
-          <p>첫 번째 p요소가 끝난 후 대기 중인 p태그가 하나 더 있어야 한다</p>
-          <p>첫 번째 p요소가 끝난 후 대기 중인 p태그가 하나 더 있어야 한다</p>
+          <p>움직이게 하고 싶은데 어떻게 해야 정답일까!!!!!!!!!!!!!!!!!!!</p>
         </section>
         <section>
           <div class="mw">
             <div class="left">
-              <h3>Testimonials</h3>
+              <p>Testimonials</p>
               <p>
                 “Joey is a remarkable artist. He grasps abstract ideas and
                 transforms them into exceptional visuals. Throughout the years,
@@ -177,7 +181,7 @@
           </div>
         </section>
       </main>
-      <footer id="contact">
+      <footer id="ft">
         <div class="top">
           <p>Let's Talk!</p>
           <a href="mailto:s2seolyeji@gmail.com"
@@ -194,6 +198,9 @@
           </div>
         </div>
       </footer>
+      <!-- <a href="#ft" class="btnScroll"
+        >scroll down <i class="fa-solid fa-sort-down"></i
+      ></a> -->
     </div>
   </body>
 </html>
